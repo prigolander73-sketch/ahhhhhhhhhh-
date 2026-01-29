@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lander C. Prigo | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header class="profile-section">
+            <div class="header-card">
+                <div class="profile-main">
+                    <div class="avatar-wrapper">
+                        <img src="portfolio.jpg" alt="Lander C. Prigo" class="avatar">
+                        <div class="status-indicator"></div>
+                    </div>
+                    <div class="profile-details">
+                        <div class="name-badge-row">
+                            <h1>Lander C. Prigo</h1>
+                            <span class="verified-badge">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="#3b82f6"><path d="M22.5 12.5c0-1.58-.88-2.95-2.18-3.66.26-.89.43-1.82.43-2.79 0-3.02-2.45-5.47-5.47-5.47-.97 0-1.9.17-2.79.43L12.5 1.5l-1.06.43c-.89-.26-1.82-.43-2.79-.43-3.02 0-5.47 2.45-5.47 5.47 0 .97.17 1.9.43 2.79-1.3.71-2.18 2.08-2.18 3.66 0 1.58.88 2.95 2.18 3.66-.26.89-.43 1.82-.43 2.79 0 3.02 2.45 5.47 5.47 5.47.97 0 1.9-.17 2.79-.43l1.06.43 1.06-.43c.89.26 1.82.43 2.79.43 3.02 0 5.47-2.45 5.47-5.47 0-.97-.17-1.9-.43-2.79 1.3-.71 2.18-2.08 2.18-3.66zm-11.41 4.75L7.54 13.7l1.41-1.41 2.14 2.14 5.16-5.16 1.41 1.41-6.57 6.57z"/></svg>
+                            </span>
+                        </div>
+                        <p class="subtitle">Software Engineer \ Hardware Specialist</p>
+                        <div class="action-buttons">
+                            <a href="mailto:your-email@example.com" class="btn-primary">Send Email</a>
+                            <a href="#" class="btn-secondary">Schedule a Call</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-grid">
+            <section class="card about-card">
+                <div class="card-title">
+                    <span class="icon">💼</span> <h3>About</h3>
+                </div>
+                <p>I'm an IT student specializing in computer architecture and software solutions. I've spent the last 2 years mastering hardware disassembly, system unit assembly, and operating system deployment.</p>
+                <p>Currently focusing on building modern web applications while maintaining high-performance computer hardware environments.</p>
+            </section>
+
+            <section class="card stack-card">
+                <div class="card-title">
+                    <span class="icon">💻</span> <h3>Hardware Stack</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="tag">Windows 11 Deployment</span>
+                    <span class="tag">System Unit Assembly</span>
+                    <span class="tag">Hardware Repair</span>
+                    <span class="tag">PC Optimization</span>
+                    <span class="tag">Thermal Management</span>
+                </div>
+            </section>
+
+            <section class="card timeline-card">
+                <div class="card-title">
+                    <span class="icon">🎓</span> <h3>Education</h3>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="dot"></div>
+                        <div class="time-content">
+                            <h4>2nd Year BSIT</h4>
+                            <p>Current Undergraduate</p>
+                            <span class="year">2026</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card calc-card">
+                <div class="card-title">
+                    <span class="icon">🧮</span> <h3>Interactive Tool</h3>
+                </div>
+                <div class="calculator">
+                    <div class="display" id="result">0</div>
+                    <div class="buttons">
+                        <button onclick="clearCalc()" class="btn-c">C</button>
+                        <button onclick="input('/')">÷</button>
+                        <button onclick="input('*')">×</button>
+                        <button onclick="del()">DEL</button>
+                        <button onclick="input('7')">7</button>
+                        <button onclick="input('8')">8</button>
+                        <button onclick="input('9')">9</button>
+                        <button onclick="input('-')">-</button>
+                        <button onclick="input('4')">4</button>
+                        <button onclick="input('5')">5</button>
+                        <button onclick="input('6')">6</button>
+                        <button onclick="input('+')">+</button>
+                        <button onclick="input('1')">1</button>
+                        <button onclick="input('2')">2</button>
+                        <button onclick="input('3')">3</button>
+                        <button onclick="solve()" class="btn-equal">=</button>
+                        <button onclick="input('0')" class="zero">0</button>
+                        <button onclick="input('.')">.</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        let d = document.getElementById('result');
+        function input(v) { if(d.innerHTML === '0') d.innerHTML = v; else d.innerHTML += v; }
+        function clearCalc() { d.innerHTML = '0'; }
+        function del() { d.innerHTML = d.innerHTML.slice(0, -1) || '0'; }
+        function solve() { try { d.innerHTML = eval(d.innerHTML); } catch { d.innerHTML = 'Error'; } }
+    </script>
+</body>
+</html>
